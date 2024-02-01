@@ -9,7 +9,7 @@ a=2e-9;
 b=0.02e-9;
 tsra=200e-3;
 
-dt=0.5e-2;
+dt=0.5e-4;
 tmax=1.5;
 tvec=0:dt:tmax;
 
@@ -30,7 +30,7 @@ for i=1:length(tvec)-1
        isra(i)=isra(i)+b; 
     end
 
-    fv= gl*( el-vm(i)+deltath*exp((vm(i)-vth)/deltath) )-isra(i)+current(i) /cm;
+    fv= (gl*( el-vm(i)+deltath*exp((vm(i)-vth)/deltath) )-isra(i)+current(i)) /cm;
     dv=dt*fv;
     vm(i+1)=vm(i)+dv;
     isra(i+1)=isra(i)+dt*(a*(vm(i)-el)-isra(i))/tsra;
