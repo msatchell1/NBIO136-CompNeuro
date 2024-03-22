@@ -12,7 +12,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear;
 
-question_part = 5;          % 4 varies E-input, 5 varies I-input, < 4 is a single input
+question_part = 4;          % 4 varies E-input, 5 varies I-input, < 4 is a single input
 %% Set up the simulation parameters
 dt = 0.0001;                 % Time step to use
 tmax = 1.5;                   % Maximum time for simulation
